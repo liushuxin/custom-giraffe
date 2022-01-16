@@ -5,8 +5,5 @@ export default function handler(req, res) {
   for (const [key, value] of Object.entries(req.query)) {
     values.push({ key, value });
   }
-  const getData = async () => {
-    res.status(200).json(data);
-  };
-  getData();
+  res.status(200).json(values);
 }
